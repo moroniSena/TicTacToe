@@ -1,0 +1,579 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
+namespace WpfApplication2
+{
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : Window
+    {
+        int count = 0;
+
+        bool start = false;
+
+        public MainWindow()
+        {
+            InitializeComponent();
+
+            textBox1.Text = "player one";
+
+            textBox2.Text = "player two";
+
+            // Layout window
+
+            // Make sure buttons cannot be click before game
+
+            // textBlock displays whos turn
+
+            // On click, display X or O
+
+            // Calculate winner
+
+            // Dectect when no winner 
+
+            // Can use button to track values
+
+            // track whose turn 
+
+            // After each click check for winner
+
+            // Check for win, takes three buttons. returns if there was a winner
+
+            // Do not disable the buttons 
+
+            // On start game, do not clear names
+
+        }
+
+        private bool IsEven(int count)
+        {
+            if ((count % 2) == 1)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            if (count == 0)
+            {
+
+
+                if (textBox2.Text == "moroni")
+                {
+                    count += 2;
+
+                    textWinner.Text = "Game Start! Moroni goes first";
+                }
+                else
+                {
+                    count += 1;
+
+                    textWinner.Text = "Game Start! " + textBox1.Text + " goes first";
+                }
+
+                start = true;
+            }
+        }
+
+        private void boxOne_Click(object sender, RoutedEventArgs e)
+        {
+            if (count >= 1 && boxOne.Content == "" && start == true)
+            {
+                IsEven(count);
+                if (IsEven(count) == false)
+                {
+                    boxOne.Content = "X";
+
+                    textWinner.Text = "It's " + textBox2.Text + "'s turn";
+                }
+                else
+                {
+                    boxOne.Content = "O";
+
+                    textWinner.Text = "It's " + textBox1.Text + "'s turn";
+                }
+
+                Win();
+
+                count += 1;
+            }
+        }
+
+        private void boxTwo_Click(object sender, RoutedEventArgs e)
+        {
+            if (count >= 1 && boxTwo.Content == "" && start == true)
+            {
+                IsEven(count);
+                if (IsEven(count) == false)
+                {
+                    boxTwo.Content = "X";
+
+                    textWinner.Text = "It's " + textBox2.Text + "'s turn";
+                }
+                else
+                {
+                    boxTwo.Content = "O";
+
+                    textWinner.Text = "It's " + textBox1.Text + "'s turn";
+                }
+
+                Win();
+
+                count += 1;
+            }
+        }
+
+        private void boxThree_Click(object sender, RoutedEventArgs e)
+        {
+            if (count >= 1 && boxThree.Content == "" && start == true)
+            {
+                IsEven(count);
+                if (IsEven(count) == false)
+                {
+                    boxThree.Content = "X";
+
+                    textWinner.Text = "It's " + textBox2.Text + "'s turn";
+                }
+                else
+                {
+                    boxThree.Content = "O";
+
+                    textWinner.Text = "It's " + textBox1.Text + "'s turn";
+                }
+
+                Win();
+
+                count += 1;
+            }
+        }
+
+        private void boxFour_Click(object sender, RoutedEventArgs e)
+        {
+            if (count >= 1 && boxFour.Content == "" && start == true)
+            {
+                IsEven(count);
+                if (IsEven(count) == false)
+                {
+                    boxFour.Content = "X";
+
+                    textWinner.Text = "It's " + textBox2.Text + "'s turn";
+                }
+                else
+                {
+                    boxFour.Content = "O";
+
+                    textWinner.Text = "It's " + textBox1.Text + "'s turn";
+                }
+
+                Win();
+
+                count += 1;
+            }
+        }
+
+        private void boxFive_Click(object sender, RoutedEventArgs e)
+        {
+            if (count >= 1 && boxFive.Content == "" && start == true)
+            {
+                IsEven(count);
+                if (IsEven(count) == false)
+                {
+                    boxFive.Content = "X";
+
+                    textWinner.Text = "It's " + textBox2.Text + "'s turn";
+                }
+                else
+                {
+                    boxFive.Content = "O";
+
+                    textWinner.Text = "It's " + textBox1.Text + "'s turn";
+                }
+
+                Win();
+
+                count += 1;
+            }
+        }
+
+        private void boxSix_Click(object sender, RoutedEventArgs e)
+        {
+            if (count >= 1 && boxSix.Content == "" && start == true)
+            {
+                IsEven(count);
+                if (IsEven(count) == false)
+                {
+                    boxSix.Content = "X";
+
+                    textWinner.Text = "It's " + textBox2.Text + "'s turn";
+                }
+                else
+                {
+                    boxSix.Content = "O";
+
+                    textWinner.Text = "It's " + textBox1.Text + "'s turn";
+                }
+
+                Win();
+
+                count += 1;
+            }
+        }
+
+        private void boxSeven_Click(object sender, RoutedEventArgs e)
+        {
+            if (count >= 1 && boxSeven.Content == "" && start == true)
+            {
+                IsEven(count);
+                if (IsEven(count) == false)
+                {
+                    boxSeven.Content = "X";
+
+                    textWinner.Text = "It's " + textBox2.Text + "'s turn";
+                }
+                else
+                {
+                    boxSeven.Content = "O";
+
+                    textWinner.Text = "It's " + textBox1.Text + "'s turn";
+                }
+
+                Win();
+
+                count += 1;
+            }
+        }
+
+        private void boxEight_Click(object sender, RoutedEventArgs e)
+        {
+            if (count >= 1 && boxEight.Content == "" && start == true)
+            {
+                IsEven(count);
+                if (IsEven(count) == false)
+                {
+                    boxEight.Content = "X";
+
+                    textWinner.Text = "It's " + textBox2.Text + "'s turn";
+                    
+                }
+                else
+                {
+                    boxEight.Content = "O";
+
+                    textWinner.Text = "It's " + textBox1.Text + "'s turn";
+                    
+                }
+
+
+                count += 1;
+            }
+        }
+
+        private void boxNine_Click(object sender, RoutedEventArgs e)
+        {
+            if (count >= 1 && boxNine.Content == "" && start == true)
+            {
+                IsEven(count);
+                if (IsEven(count) == false)
+                {
+                    boxNine.Content = "X";
+
+                    textWinner.Text = "It's " + textBox2.Text + "'s turn";
+                }
+                else
+                {
+                    boxNine.Content = "O";
+
+                    textWinner.Text = "It's " + textBox1.Text + "'s turn";
+                }
+
+                Win();
+
+                count += 1;
+
+
+            }
+        }
+
+        private void Win()
+        {
+            if (boxOne.Content == boxTwo.Content && boxThree.Content == boxOne.Content && boxOne.Content == "X")
+            {
+                textWinner.Text = textBox1.Text + " wins!";
+
+                start = false;
+
+                boxOne.Background = Brushes.Red;
+
+                boxTwo.Background = Brushes.Red;
+
+                boxThree.Background = Brushes.Red;
+
+            }
+            if (boxOne.Content == boxTwo.Content && boxThree.Content == boxOne.Content && boxOne.Content == "O")
+            {
+                textWinner.Text = textBox2.Text + " wins!";
+
+                start = false;
+
+                boxOne.Background = Brushes.Red;
+
+                boxTwo.Background = Brushes.Red;
+
+                boxThree.Background = Brushes.Red;
+
+            }
+            if (boxOne.Content == boxFour.Content && boxSeven.Content == boxOne.Content && boxOne.Content == "O")
+            {
+                textWinner.Text = textBox2.Text + " wins!";
+
+                start = false;
+
+                boxOne.Background = Brushes.Red;
+
+                boxFour.Background = Brushes.Red;
+
+                boxSeven.Background = Brushes.Red;
+
+            }
+            if (boxOne.Content == boxFour.Content && boxSeven.Content == boxOne.Content && boxOne.Content == "X")
+            {
+                textWinner.Text = textBox1.Text + " wins!";
+
+                start = false;
+                boxOne.Background = Brushes.Red;
+
+                boxFour.Background = Brushes.Red;
+
+                boxSeven.Background = Brushes.Red;
+            }
+             if (boxOne.Content == boxFive.Content && boxNine.Content == boxOne.Content && boxOne.Content == "O")
+            {
+                textWinner.Text = textBox2.Text + " wins!";
+
+                start = false;
+
+                boxOne.Background = Brushes.Red;
+
+                boxFive.Background = Brushes.Red;
+
+                boxNine.Background = Brushes.Red;
+            }
+             if (boxOne.Content == boxFive.Content && boxNine.Content == boxOne.Content && boxOne.Content == "X")
+            {
+                textWinner.Text = textBox1.Text + " wins!";
+
+                start = false;
+
+                boxOne.Background = Brushes.Red;
+
+                boxFive.Background = Brushes.Red;
+
+                boxNine.Background = Brushes.Red;
+            }
+             if (boxThree.Content == boxSix.Content && boxNine.Content == boxThree.Content && boxThree.Content == "X")
+            {
+                textWinner.Text = textBox1.Text + " wins!";
+
+                start = false;
+
+                boxThree.Background = Brushes.Red;
+
+                boxSix.Background = Brushes.Red;
+
+                boxNine.Background = Brushes.Red;
+            }
+             if (boxThree.Content == boxSix.Content && boxNine.Content == boxThree.Content && boxThree.Content == "O")
+            {
+                textWinner.Text = textBox1.Text + " wins!";
+
+                start = false;
+
+                boxThree.Background = Brushes.Red;
+
+                boxSix.Background = Brushes.Red;
+
+                boxNine.Background = Brushes.Red;
+            }
+             if (boxFour.Content == boxFive.Content && boxSix.Content == boxFour.Content && boxFour.Content == "O")
+            {
+                textWinner.Text = textBox1.Text + " wins!";
+
+                start = false;
+
+                boxFour.Background = Brushes.Red;
+
+                boxFive.Background = Brushes.Red;
+
+                boxSix.Background = Brushes.Red;
+            }
+             if (boxFour.Content == boxFive.Content && boxSix.Content == boxFour.Content && boxFour.Content == "X")
+            {
+                textWinner.Text = textBox1.Text + " wins!";
+
+                start = false;
+
+                boxFour.Background = Brushes.Red;
+
+                boxFive.Background = Brushes.Red;
+
+                boxSix.Background = Brushes.Red;
+            }
+             if (boxSeven.Content == boxEight.Content && boxNine.Content == boxSeven.Content && boxSeven.Content == "O")
+            {
+                textWinner.Text = textBox1.Text + " wins!";
+
+                start = false;
+
+                boxSeven.Background = Brushes.Red;
+
+                boxEight.Background = Brushes.Red;
+
+                boxNine.Background = Brushes.Red;
+            }
+             if (boxSeven.Content == boxEight.Content && boxNine.Content == boxSeven.Content && boxSeven.Content == "X")
+            {
+                textWinner.Text = textBox1.Text + " wins!";
+
+                start = false;
+
+                boxSeven.Background = Brushes.Red;
+
+                boxEight.Background = Brushes.Red;
+
+                boxNine.Background = Brushes.Red;
+            }
+             if (boxTwo.Content == boxFive.Content && boxEight.Content == boxTwo.Content && boxTwo.Content == "X")
+            {
+                textWinner.Text = textBox1.Text + " wins!";
+
+                start = false;
+
+                boxTwo.Background = Brushes.Red;
+
+                boxFive.Background = Brushes.Red;
+
+                boxEight.Background = Brushes.Red;
+            }
+            if (boxTwo.Content == boxFive.Content && boxEight.Content == boxTwo.Content && boxTwo.Content == "O")
+            {
+                textWinner.Text = textBox2.Text + " wins!";
+
+                start = false;
+
+                boxTwo.Background = Brushes.Red;
+
+                boxFive.Background = Brushes.Red;
+
+                boxEight.Background = Brushes.Red;
+            }
+             if (boxThree.Content == boxFive.Content && boxSeven.Content == boxThree.Content && boxThree.Content == "O")
+            {
+                textWinner.Text = textBox2.Text + " wins!";
+
+                start = false;
+
+                boxThree.Background = Brushes.Red;
+
+                boxFive.Background = Brushes.Red;
+
+                boxSeven.Background = Brushes.Red;
+            }
+             if (boxThree.Content == boxFive.Content && boxSeven.Content == boxThree.Content && boxThree.Content == "X")
+            {
+                textWinner.Text = textBox2.Text + " wins!";
+
+                start = false;
+
+                boxThree.Background = Brushes.Red;
+
+                boxFive.Background = Brushes.Red;
+
+                boxSeven.Background = Brushes.Red;
+            }
+             if (count >= 9)
+            {
+                textWinner.Text = "Tie";
+
+                boxOne.Background = Brushes.PeachPuff;
+
+                boxTwo.Background = Brushes.PeachPuff;
+
+                boxThree.Background = Brushes.PeachPuff;
+
+                boxFour.Background = Brushes.PeachPuff;
+
+                boxFive.Background = Brushes.PeachPuff;
+
+                boxSix.Background = Brushes.PeachPuff;
+
+                boxSeven.Background = Brushes.PeachPuff;
+
+                boxEight.Background = Brushes.PeachPuff;
+
+                boxNine.Background = Brushes.PeachPuff;
+                
+            }
+                
+
+        }
+        
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            count = 0;
+
+            boxOne.Content = "";
+
+            boxTwo.Content = "";
+
+            boxThree.Content = "";
+
+            boxFour.Content = "";
+
+            boxFive.Content = "";
+
+            boxSix.Content = "";
+
+            boxSeven.Content = "";
+
+            boxEight.Content = "";
+
+            boxNine.Content = "";
+
+            textWinner.Text = "";
+            
+            boxOne.Background = Brushes.White;
+
+            boxTwo.Background = Brushes.White;
+
+            boxThree.Background = Brushes.White;
+
+            boxFour.Background = Brushes.White;
+
+            boxFive.Background = Brushes.White;
+
+            boxSix.Background = Brushes.White;
+
+            boxSeven.Background = Brushes.White;
+
+            boxEight.Background = Brushes.White;
+
+            boxNine.Background = Brushes.White;
+        }
+    }
+}
